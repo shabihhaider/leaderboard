@@ -11,12 +11,24 @@ importers:
       '@vercel/functions':
         specifier: ^2.0.3
         version: 2.0.3
+      '@vercel/postgres':
+        specifier: ^0.10.0
+        version: 0.10.0
+      '@whop-apps/sdk':
+        specifier: 0.0.1-canary.117
+        version: 0.0.1-canary.117(react@19.1.0)
       '@whop/api':
         specifier: ^0.0.50
         version: 0.0.50(@auth/core@0.40.0)
       '@whop/react':
         specifier: 0.2.36
         version: 0.2.36(@auth/core@0.40.0)(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      lucide-react:
+        specifier: ^0.544.0
+        version: 0.544.0(react@19.1.0)
       next:
         specifier: 15.3.2
         version: 15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -26,6 +38,12 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
+      shadcn-ui:
+        specifier: ^0.9.5
+        version: 0.9.5
+      tailwind-merge:
+        specifier: ^3.3.1
+        version: 3.3.1
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4
@@ -316,6 +334,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@neondatabase/serverless@0.9.5':
+    resolution: {integrity: sha512-siFas6gItqv6wD/pZnvdu34wEqgG3nSE6zWZdq5j2DEsa+VvX8i/5HXJOo06qrw5axPXn+lGCxeR+NLaSPIXug==}
 
   '@next/env@15.3.2':
     resolution: {integrity: sha512-xURk++7P7qR9JG1jJtLzPzf0qEvqCN0A/T3DXf8IPMKo9/6FfjxtEffRJIIew/bIL4T3C2jLLqBor8B/zVlx6g==}
@@ -1729,6 +1750,9 @@ packages:
   '@types/node@20.17.46':
     resolution: {integrity: sha512-0PQHLhZPWOxGW4auogW0eOQAuNIlCYvibIpG67ja0TOJ6/sehu+1en7sfceUn+QQtx4Rk3GxbLNwPh0Cav7TWw==}
 
+  '@types/pg@8.11.6':
+    resolution: {integrity: sha512-/2WmmBXHLsfRqzfHW7BNZ8SbYzE8OSk7i3WjFYvfgRHj7S1xj+16Je5fUKv3lVdVzk/zn9TXOqf+avFCFIE0yQ==}
+
   '@types/react-dom@19.1.5':
     resolution: {integrity: sha512-CMCjrWucUBZvohgZxkjd6S9h0nZxXjzus6yDfUb+xLxYM7VvjKNH1tQrE9GWLql1XoOP4/Ds3bwFqShHUYraGg==}
     peerDependencies:
@@ -1746,12 +1770,51 @@ packages:
       '@aws-sdk/credential-provider-web-identity':
         optional: true
 
+  '@vercel/postgres@0.10.0':
+    resolution: {integrity: sha512-fSD23DxGND40IzSkXjcFcxr53t3Tiym59Is0jSYIFpG4/0f0KO9SGtcp1sXiebvPaGe7N/tU05cH4yt2S6/IPg==}
+    engines: {node: '>=18.14'}
+
+  '@whop-apps/api@0.0.1-canary.117':
+    resolution: {integrity: sha512-tvMezS7vegiMqTAAVfu8FbKKAkDuMP3AsPRBWVczVFGTfgT5NH5siY6+eQ2SeNzBDyBq4hlrAEPcKSgSeCdqFQ==}
+
+  '@whop-apps/auth@0.0.1-canary.117':
+    resolution: {integrity: sha512-RuUezWK337vbOqstbSTl4YHtnw7e5dI3e/97vEoT4XxpNBkqsSCvmIZej988JypH3mK5rjm3Ve7n08L6OAt98A==}
+
   '@whop-apps/core@0.0.1-canary.116':
     resolution: {integrity: sha512-8dKsoY3NCQXGnDmYvDC4UYeAQnGTPUuqMIWEM3XgFKkK6+JLcKcJ7FfD4pw5kEz7Bops8GQCPO210vlG49YfCQ==}
+
+  '@whop-apps/core@0.0.1-canary.117':
+    resolution: {integrity: sha512-blZKhIF4lCcmHCtfo0rYf1XCwvGsLpRUMvmTpfPJ5ly14ecpJU4DDJFNOvGRrgYRhmjrcDP/Ghj/FMVPrfoYXw==}
 
   '@whop-apps/dev-proxy@0.0.1-canary.116':
     resolution: {integrity: sha512-7droSqunJt/Qa4wpZIbYXVOqs30F+GT1BQUOGwPThjoX08RW/G9SshS3Sp/uMIA2uX6BH3ZinBrNjhHEfv0p+g==}
     hasBin: true
+
+  '@whop-apps/dev-proxy@0.0.1-canary.117':
+    resolution: {integrity: sha512-JpJSX0ui/Y4ybIKarMU542LscsP5iPZPSN27wos6I8mrUAJBXcZV1GrWBIt6aVoEXArbtx39Ic4+R5van7txtQ==}
+    hasBin: true
+
+  '@whop-apps/iframe@0.0.1-canary.117':
+    resolution: {integrity: sha512-UqPSjXhBfh5rf87diNhmMT//I7u7baSjtzO+dlDeMHSTS3JC33Ll0vkzHAS9bZyoogAo49MvIv9hbRfdDGAPuw==}
+
+  '@whop-apps/oauth@0.0.1-canary.117':
+    resolution: {integrity: sha512-XxDPuS+ZBEtcpIBu/6ppNhOcBVxrP1RIdskfP4T3LYGw3HNajxGqZcMw6auBhbluroU/V9rg139p7IIv51+VQA==}
+
+  '@whop-apps/sdk@0.0.1-canary.117':
+    resolution: {integrity: sha512-2HQtHhP7hsarSy/qcf7OM/ZtwX6yOemZBCNNgEahlD7z+b4VtAIXrHYVOK5Q8To7nGWzQEh7q5iNKmNAEzrf7A==}
+    hasBin: true
+
+  '@whop-apps/theme@0.0.1-canary.117':
+    resolution: {integrity: sha512-bYP8jMFSDMa4OIETrGD7kmF09pFISSLoK7ALgYuyXgwRI8f4uWVdyZAoAq1gvRYlsS5U/xTR0EctddPoIAUQrQ==}
+    peerDependencies:
+      react: ^18.2.0
+
+  '@whop-apps/typed-api@0.0.1-canary.117':
+    resolution: {integrity: sha512-EQHTUHnSykDzQlOxxZtFlopnWLQYrRJAlgLnttVCBNGSP8D8omK62ZK9n1aXl9TOKJYjo4PBnHyeYe9W7soHqw==}
+    hasBin: true
+
+  '@whop-apps/typed-transport@0.0.1-canary.117':
+    resolution: {integrity: sha512-VP7U4nyQE35HODYFbt/mKuT+0a0Jn5zqQWgxse3nEBgy8KTKD2ugWtZj8PMF3yl/wpHbPngOYnd2uegaT3S8UA==}
 
   '@whop/api@0.0.42':
     resolution: {integrity: sha512-8146m8jnUN/cxMXzzJPNIAm0W8zYKV4q4uzM6Ghjf/ipXMiX+AkzZgRYa/FNi7YTyZJfI7xUbdH3E7f8RPOHnQ==}
@@ -1788,12 +1851,20 @@ packages:
     resolution: {integrity: sha512-ik3ZgC9dY/lYVVM++OISsaYDeg1tb0VtP5uL3ouh1koGOaUMDPpbFIei4JkFimWUFPn90sbMNMXQAIVOlnYKJA==}
     engines: {node: '>=10'}
 
+  bufferutil@4.0.9:
+    resolution: {integrity: sha512-WDtdLmJvAuNNPzByAYpRo2rF1Mmradw6gvWsQKf63476DDXmomT9zUiGypLcG4ibIM67vhAj8jJRdbmEws2Aqw==}
+    engines: {node: '>=6.14.2'}
+
   busboy@1.6.0:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
     engines: {node: '>=10.16.0'}
 
   caniuse-lite@1.0.30001718:
     resolution: {integrity: sha512-AflseV1ahcSunK53NfEs9gFWgOEmzr0f+kaMFA4xiLZlr9Hzt7HxcSpIFcnNCUkz6R6dWKa54rUz3HUmI3nVcw==}
+
+  chalk@5.6.2:
+    resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   chownr@3.0.0:
     resolution: {integrity: sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==}
@@ -2003,6 +2074,11 @@ packages:
     resolution: {integrity: sha512-6b6gd/RUXKaw5keVdSEtqFVdzWnU5jMxTUjA2bVcMNPLwSQ08Sv/UodBVtETLCn7k4S1Ibxwh7k68IwLZPgKaA==}
     engines: {node: '>= 12.0.0'}
 
+  lucide-react@0.544.0:
+    resolution: {integrity: sha512-t5tS44bqd825zAW45UQxpG2CvcC4urOwn2TrwSH8u+MjeE+1NnWl6QqeQ/6NdjMqdOygyiT9p3Ev0p1NJykxjw==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
@@ -2048,12 +2124,37 @@ packages:
       sass:
         optional: true
 
+  node-gyp-build@4.8.4:
+    resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
+    hasBin: true
+
   oauth4webapi@3.7.0:
     resolution: {integrity: sha512-Q52wTPUWPsVLVVmTViXPQFMW2h2xv2jnDGxypjpelCFKaOjLsm7AxYuOk1oQgFm95VNDbuggasu9htXrz6XwKw==}
+
+  obuf@1.1.2:
+    resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
+
+  openapi-typescript-helpers@0.0.2:
+    resolution: {integrity: sha512-r5Z4tlGa2l6jYO1ENT9Giqo/ZWzWPmsYUR41O01kjYr7vg4iBFaMh0W0g8Ef72SpeU2F+TY6CAdKxTv7aq+WXA==}
 
   path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
+
+  pg-int8@1.0.1:
+    resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
+    engines: {node: '>=4.0.0'}
+
+  pg-numeric@1.0.2:
+    resolution: {integrity: sha512-BM/Thnrw5jm2kKLE5uJkXqqExRUY/toLHda65XgFTBTFYZyopbKjBe29Ii3RbkvlsMoFwD+tHeGaCjjv0gHlyw==}
+    engines: {node: '>=4'}
+
+  pg-protocol@1.10.3:
+    resolution: {integrity: sha512-6DIBgBQaTKDJyxnXaLiLR8wBpQQcGWuAESkRBX/t6OwA8YsqP+iVSiond2EDy6Y/dsGk8rh/jtax3js5NeV7JQ==}
+
+  pg-types@4.1.0:
+    resolution: {integrity: sha512-o2XFanIMy/3+mThw69O8d4n1E5zsLhdO+OPqswezu7Z5ekP4hYDqlDjlmOpYMbzY2Br0ufCwJLdDIXeNVwcWFg==}
+    engines: {node: '>=10'}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -2065,6 +2166,25 @@ packages:
   postcss@8.5.3:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
+
+  postgres-array@3.0.4:
+    resolution: {integrity: sha512-nAUSGfSDGOaOAEGwqsRY27GPOea7CNipJPOA7lPbdEpx5Kg3qzdP0AaWC5MlhTWV9s4hFX39nomVZ+C4tnGOJQ==}
+    engines: {node: '>=12'}
+
+  postgres-bytea@3.0.0:
+    resolution: {integrity: sha512-CNd4jim9RFPkObHSjVHlVrxoVQXz7quwNFpz7RY1okNNme49+sVyiTvTRobiLV548Hx/hb1BG+iE7h9493WzFw==}
+    engines: {node: '>= 6'}
+
+  postgres-date@2.1.0:
+    resolution: {integrity: sha512-K7Juri8gtgXVcDfZttFKVmhglp7epKb1K4pgrkLxehjqkrgPhfG6OO8LHLkfaqkbpjNRnra018XwAr1yQFWGcA==}
+    engines: {node: '>=12'}
+
+  postgres-interval@3.0.0:
+    resolution: {integrity: sha512-BSNDnbyZCXSxgA+1f5UU2GmwhoI0aU5yMxRGO8CdFEcY2BQF9xm/7MqKnYoM1nJDk8nONNWDk9WeSmePFhQdlw==}
+    engines: {node: '>=12'}
+
+  postgres-range@1.1.4:
+    resolution: {integrity: sha512-i/hbxIE9803Alj/6ytL7UHQxRvZkI9O4Sy+J3HGc4F4oo/2eQAjTSNJ0bfxyse3bH0nuVesCk+3IRLaMtG3H6w==}
 
   preact-render-to-string@6.5.11:
     resolution: {integrity: sha512-ubnauqoGczeGISiOh6RjX0/cdaF8v/oDXIjO85XALCQjwQP+SB4RDXXtvZ6yTYSjG+PC1QRP2AhPgCEsM2EvUw==}
@@ -2154,6 +2274,10 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  shadcn-ui@0.9.5:
+    resolution: {integrity: sha512-dsBQWpdLLYCdSdmvOmu53nJhhWnQD1OiblhuhkI4rPYxPKTyfbmZ2NTJHWMu1fXN9PTfN6IVK5vvh+BrjHJx2g==}
+    hasBin: true
+
   sharp@0.34.1:
     resolution: {integrity: sha512-1j0w61+eVxu7DawFJtnfYcvSv6qPFvfTaqzTQ2BLknVhHTwGS8sc63ZBF4rzkWMBVKybo4S5OBtDdZahh2A1xg==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -2189,6 +2313,9 @@ packages:
         optional: true
       babel-plugin-macros:
         optional: true
+
+  tailwind-merge@3.3.1:
+    resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
 
   tailwindcss@4.1.6:
     resolution: {integrity: sha512-j0cGLTreM6u4OWzBeLBpycK0WIh8w7kSwcUsQZoGLHZ7xDTdM69lN64AgoIEEwFi0tnhs4wSykUa5YWxAzgFYg==}
@@ -2250,6 +2377,18 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
+
+  ws@8.18.3:
+    resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
   yallist@5.0.0:
     resolution: {integrity: sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==}
@@ -2479,6 +2618,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@neondatabase/serverless@0.9.5':
+    dependencies:
+      '@types/pg': 8.11.6
 
   '@next/env@15.3.2': {}
 
@@ -4358,6 +4501,12 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/pg@8.11.6':
+    dependencies:
+      '@types/node': 20.17.46
+      pg-protocol: 1.10.3
+      pg-types: 4.1.0
+
   '@types/react-dom@19.1.5(@types/react@19.1.4)':
     dependencies:
       '@types/react': 19.1.4
@@ -4368,7 +4517,30 @@ snapshots:
 
   '@vercel/functions@2.0.3': {}
 
+  '@vercel/postgres@0.10.0':
+    dependencies:
+      '@neondatabase/serverless': 0.9.5
+      bufferutil: 4.0.9
+      ws: 8.18.3(bufferutil@4.0.9)
+    transitivePeerDependencies:
+      - utf-8-validate
+
+  '@whop-apps/api@0.0.1-canary.117':
+    dependencies:
+      '@whop-apps/auth': 0.0.1-canary.117
+      '@whop-apps/core': 0.0.1-canary.117
+      '@whop-apps/typed-api': 0.0.1-canary.117
+      openapi-typescript-helpers: 0.0.2
+
+  '@whop-apps/auth@0.0.1-canary.117':
+    dependencies:
+      '@whop-apps/core': 0.0.1-canary.117
+      cookie: 1.0.2
+      jose: 4.15.9
+
   '@whop-apps/core@0.0.1-canary.116': {}
+
+  '@whop-apps/core@0.0.1-canary.117': {}
 
   '@whop-apps/dev-proxy@0.0.1-canary.116':
     dependencies:
@@ -4379,6 +4551,55 @@ snapshots:
       jose: 4.15.9
     transitivePeerDependencies:
       - debug
+
+  '@whop-apps/dev-proxy@0.0.1-canary.117':
+    dependencies:
+      '@types/http-proxy': 1.17.16
+      '@whop-apps/core': 0.0.1-canary.117
+      cookie: 1.0.2
+      http-proxy: 1.18.1
+      jose: 4.15.9
+    transitivePeerDependencies:
+      - debug
+
+  '@whop-apps/iframe@0.0.1-canary.117':
+    dependencies:
+      '@whop-apps/core': 0.0.1-canary.117
+      '@whop-apps/typed-transport': 0.0.1-canary.117
+      zod: 3.22.3
+
+  '@whop-apps/oauth@0.0.1-canary.117':
+    dependencies:
+      '@whop-apps/auth': 0.0.1-canary.117
+      '@whop-apps/core': 0.0.1-canary.117
+      '@whop-apps/iframe': 0.0.1-canary.117
+      '@whop-apps/typed-api': 0.0.1-canary.117
+      zod: 3.22.3
+
+  '@whop-apps/sdk@0.0.1-canary.117(react@19.1.0)':
+    dependencies:
+      '@whop-apps/api': 0.0.1-canary.117
+      '@whop-apps/auth': 0.0.1-canary.117
+      '@whop-apps/core': 0.0.1-canary.117
+      '@whop-apps/dev-proxy': 0.0.1-canary.117
+      '@whop-apps/iframe': 0.0.1-canary.117
+      '@whop-apps/oauth': 0.0.1-canary.117
+      '@whop-apps/theme': 0.0.1-canary.117(react@19.1.0)
+    transitivePeerDependencies:
+      - debug
+      - react
+
+  '@whop-apps/theme@0.0.1-canary.117(react@19.1.0)':
+    dependencies:
+      react: 19.1.0
+
+  '@whop-apps/typed-api@0.0.1-canary.117':
+    dependencies:
+      '@whop-apps/core': 0.0.1-canary.117
+
+  '@whop-apps/typed-transport@0.0.1-canary.117':
+    dependencies:
+      zod: 3.22.3
 
   '@whop/api@0.0.42(@auth/core@0.40.0)':
     dependencies:
@@ -4426,11 +4647,17 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  bufferutil@4.0.9:
+    dependencies:
+      node-gyp-build: 4.8.4
+
   busboy@1.6.0:
     dependencies:
       streamsearch: 1.1.0
 
   caniuse-lite@1.0.30001718: {}
+
+  chalk@5.6.2: {}
 
   chownr@3.0.0: {}
 
@@ -4620,6 +4847,10 @@ snapshots:
       lightningcss-win32-arm64-msvc: 1.29.2
       lightningcss-win32-x64-msvc: 1.29.2
 
+  lucide-react@0.544.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -4661,9 +4892,31 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
+  node-gyp-build@4.8.4: {}
+
   oauth4webapi@3.7.0: {}
 
+  obuf@1.1.2: {}
+
+  openapi-typescript-helpers@0.0.2: {}
+
   path-key@3.1.1: {}
+
+  pg-int8@1.0.1: {}
+
+  pg-numeric@1.0.2: {}
+
+  pg-protocol@1.10.3: {}
+
+  pg-types@4.1.0:
+    dependencies:
+      pg-int8: 1.0.1
+      pg-numeric: 1.0.2
+      postgres-array: 3.0.4
+      postgres-bytea: 3.0.0
+      postgres-date: 2.1.0
+      postgres-interval: 3.0.0
+      postgres-range: 1.1.4
 
   picocolors@1.1.1: {}
 
@@ -4678,6 +4931,18 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  postgres-array@3.0.4: {}
+
+  postgres-bytea@3.0.0:
+    dependencies:
+      obuf: 1.1.2
+
+  postgres-date@2.1.0: {}
+
+  postgres-interval@3.0.0: {}
+
+  postgres-range@1.1.4: {}
 
   preact-render-to-string@6.5.11(preact@10.24.3):
     dependencies:
@@ -4894,6 +5159,10 @@ snapshots:
   semver@7.7.2:
     optional: true
 
+  shadcn-ui@0.9.5:
+    dependencies:
+      chalk: 5.6.2
+
   sharp@0.34.1:
     dependencies:
       color: 4.2.3
@@ -4941,6 +5210,8 @@ snapshots:
     dependencies:
       client-only: 0.0.1
       react: 19.1.0
+
+  tailwind-merge@3.3.1: {}
 
   tailwindcss@4.1.6: {}
 
@@ -4994,6 +5265,10 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
+
+  ws@8.18.3(bufferutil@4.0.9):
+    optionalDependencies:
+      bufferutil: 4.0.9
 
   yallist@5.0.0: {}
 
