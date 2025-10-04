@@ -6,7 +6,7 @@ import AdminDashboard from '@/components/AdminDashboard';
 export default async function AdminDashboardPage({
   params,
 }: {
-  params: { companyId: string };
+  params: Promise<{ companyId: string }>;
 }) {
   const session = await getWhopSession();
 
@@ -14,10 +14,12 @@ export default async function AdminDashboardPage({
     redirect('/experiences/[experienceId]');
   }
 
+  const { companyId } = await params;
+
   const [users, categories, whopMembers] = await Promise.all([
     getAllUsers(),
-    getCategories(params.companyId),
-    fetchWhopMembers(params.companyId),
+    getCategories(companyId),
+    fetchWhopMembers(companyId),
   ]);
 
   return (
@@ -26,7 +28,7 @@ export default async function AdminDashboardPage({
         users={users}
         categories={categories}
         whopMembers={whopMembers}
-        companyId={params.companyId}
+        companyId={companyId}
         adminName={session.user.username}
       />
     </div>

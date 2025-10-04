@@ -1,7 +1,7 @@
+export const dynamic = 'force-dynamic';
+
 import { getLeaderboard } from '@/lib/db';
 import LeaderboardPage from '@/components/LeaderboardPage';
-
-export const revalidate = 60; // Revalidate every 60 seconds
 
 export default async function DiscoverPage() {
   const leaderboard = await getLeaderboard('all_time', 20);

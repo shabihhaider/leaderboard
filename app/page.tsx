@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { redirect } from 'next/navigation';
 import { getWhopSession } from '@/lib/whop';
 
@@ -19,7 +21,6 @@ export default async function HomePage() {
     );
   }
 
-  // Redirect based on user role
   if (session.isAdmin) {
     redirect('/dashboard/[companyId]');
   } else {
